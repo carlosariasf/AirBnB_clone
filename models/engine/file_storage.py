@@ -9,12 +9,10 @@ from models.base_model import BaseModel
 class FileStorage():
     """ that serializes instances to a JSON file and deserializes JSON  """
 
-    def __init__(self):
-        """ Initial class Filestorage """
-        self.__file_path = "file.json"
-        self.__objects = {}
-        self.name_cls = {
-                        "BaseModel": BaseModel}
+    __file_path = "file.json"
+    __objects = {}
+    name_cls = {
+                "BaseModel": BaseModel}
 
     def all(self):
         """ another comment """
@@ -44,5 +42,5 @@ class FileStorage():
                     obtn = self.name_cls.get(obt)
                     data.update({key: obtn(**obj)})
                 self.__objects = data
-        except:
+        except FileNotFoundError:
             pass
