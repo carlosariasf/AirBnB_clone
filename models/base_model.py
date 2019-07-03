@@ -3,6 +3,8 @@
 Comments for python CML
 
 """
+
+
 from uuid import uuid4
 from datetime import datetime
 import models
@@ -49,12 +51,10 @@ class BaseModel():
         returns a dictionary containing all keys/values
 
         """
-        dict_n = self.__dict__
-        dict_n["__class__"] = self.__class__.__name__
-        if type(self.updated_at) != str:
-            dict_n["updated_at"] = self.updated_at.isoformat()
-        if type(self.created_at) != str:
-            dict_n["created_at"] = self.created_at.isoformat()
+        dict_n = self.__dict__.copy()
+        dict_n["__class__"] = type(self).__name__
+        dict_n["updated_at"] = self.updated_at.isoformat()
+        dict_n["created_at"] = self.created_at.isoformat()
         return dict_n
 
     def __str__(self):
@@ -63,4 +63,4 @@ class BaseModel():
 
         """
         return "[{}] ({}) {}".format(
-                self.__class__.__name__, self.id, self.__dict__)
+                type(self).__name__, self.id, self.__dict__)
