@@ -31,17 +31,20 @@ class BaseModel():
 
     def save(self):
         """ updates the public instance attribute updated_at """
-        models.storage.save()
         self.updated_at = datetime.datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """ returns a dictionary containing all keys/values """
         dict_n = self.__dict__
-        dict_n["updated_at"] = self.updated_at.isoformat()
-        dict_n["created_at"] = self.created_at.isoformat()
+        if type(self.updated_at) != str:
+            dict_n["updated_at"] = self.updated_at.isoformat()
+        if type(self.created_at) != str:
+            dict_n["created_at"] = self.created_at.isoformat()
         dict_n["__class__"] = self.__class__.__name__
         return dict_n
 
     def __str__(self):
         """ Str print info  """
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(
+                self.__class__.__name__, self.id, self.__dict__)
