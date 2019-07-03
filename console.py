@@ -8,17 +8,23 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     """Airbnb clone CLI command line
     """
-    def do_EOF(self, line):
+    prompt = "(hbnb) "
+
+    def do_EOF(self, arg):
         """Exit with EOF
         """
         return True
 
-    def do_quit(self, args):
+    def do_quit(self, arg):
         """Quit command to exit the program
         """
-        raise SystemExit
+        return True
+
+    def emptyline(self):
+        """Modify behavior of native method
+        """
+        pass
 
 if __name__ == '__main__':
-    prompt = HBNBCommand()
-    prompt.prompt = '(hbnb) '
-    prompt.cmdloop()
+    hbnb = HBNBCommand()
+    hbnb.cmdloop()
