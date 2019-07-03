@@ -23,6 +23,20 @@ class FileStorage():
         self.__objects.update({'{}.{}'.format(
             type(obj).__name__, obj.id): obj})
 
+    def remove(self, key):
+        """ another comment """
+        del self.__objects[key]
+        self.save()
+
+    def update_attr(self, key, attr, value):
+        """Update data form object
+        """
+        obj_tmp = self.__objects[key]
+        self.remove(key)
+        setattr(obj_tmp, attr, value)
+        self.new(obj_tmp)
+        self.save()
+
     def save(self):
         """ another comment """
         with open(self.__file_path, mode="w", encoding="utf-8") as f:
@@ -36,11 +50,13 @@ class FileStorage():
         """ another comment """
         try:
             with open(self.__file_path, mode="r", encoding="utf-8") as f:
-                data = json.loads(f.read())
-                for key, obj in sorted(data.items()):
-                    obt = key.split(".")[0]
-                    obtn = self.name_cls.get(obt)
-                    data.update({key: obtn(**obj)})
-                self.__objects = data
+                data = f.read()
+                if data:
+                    data = json.loads(data)
+                    for key, obj in sorted(data.items()):
+                        obt = key.split(".")[0]
+                        obtn = self.name_cls.get(obt)
+                        data.update({key: obtn(**obj)})
+                    self.__objects = data
         except FileNotFoundError:
             pass
