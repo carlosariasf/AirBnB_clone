@@ -1,17 +1,24 @@
 #!/usr/bin/python3
-""" Comments for python CML"""
+"""
+Comments for python CML
 
-
-import uuid
-import datetime
+"""
+from uuid import uuid4
+from datetime import datetime
 import models
 
 
 class BaseModel():
-    """ Comment of the class Base Model """
+    """
+    Comment of the class Base Model
+
+    """
 
     def __init__(self, *args, **kwargs):
-        """  initial definition """
+        """
+        initial definition
+
+        """
         if kwargs:
             """
             for key in kwargs:
@@ -19,32 +26,41 @@ class BaseModel():
                     setattr(self, key, kwargs[key])
             """
             self.__dict__.update(kwargs)
-            self.__dict__["created_at"] = datetime.datetime.strptime(
+            self.__dict__["created_at"] = datetime.strptime(
                     self.created_at, "%Y-%m-%dT%H:%M:%S.%f")
-            self.__dict__["updated_at"] = datetime.datetime.strptime(
+            self.__dict__["updated_at"] = datetime.strptime(
                     self.updated_at, "%Y-%m-%dT%H:%M:%S.%f")
         else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.datetime.now()
-            self.updated_at = datetime.datetime.now()
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
             models.storage.new(self)
 
     def save(self):
-        """ updates the public instance attribute updated_at """
-        self.updated_at = datetime.datetime.now()
+        """
+        updates the public instance attribute updated_at
+
+        """
+        self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """ returns a dictionary containing all keys/values """
+        """
+        returns a dictionary containing all keys/values
+
+        """
         dict_n = self.__dict__
+        dict_n["__class__"] = self.__class__.__name__
         if type(self.updated_at) != str:
             dict_n["updated_at"] = self.updated_at.isoformat()
         if type(self.created_at) != str:
             dict_n["created_at"] = self.created_at.isoformat()
-        dict_n["__class__"] = self.__class__.__name__
         return dict_n
 
     def __str__(self):
-        """ Str print info  """
+        """
+        Str print info
+
+        """
         return "[{}] ({}) {}".format(
                 self.__class__.__name__, self.id, self.__dict__)
