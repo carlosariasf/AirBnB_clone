@@ -84,14 +84,20 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) is 0:
             for key, value in all_obj.items():
                 listn.append(str(value))
-            print(listn)
+            if len(listn) is 0:
+                pass
+            else:
+                print(listn)
         elif self.clss.get(arg) is None:
             print("** class doesn't exist **")
         else:
             for key, value in all_obj.items():
                 if arg in key:
                     listn.append(str(value))
-            print(listn)
+            if len(listn) is 0:
+                pass
+            else:
+                print(listn)
 
     def do_update(self, args):
         """Update or add new attribute to object
