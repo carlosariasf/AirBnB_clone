@@ -56,9 +56,7 @@ class FileStorage():
                     data = json.loads(data)
                     for key, obj in sorted(data.items()):
                         obt = key.split(".")[0]
-                        print(obt)
                         obtn = self.name_cls.get(obt)
-                        print(obtn)
                         data.update({key: obtn(**obj)})
                     self.__objects = data
         except FileNotFoundError:
