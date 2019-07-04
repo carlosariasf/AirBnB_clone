@@ -27,6 +27,16 @@ class HBNBCommand(cmd.Cmd):
             "Place": Place,
             "Review": Review}
 
+    def default(self, args):
+        """called on an input line when the command prefix is not recognized
+        """
+        cmd_args = args.split(".")
+        if self.clss.get(cmd_args[0]):
+            cls = cmd_args[1].replace("()", "")
+            if cls == "all":
+                run = getattr(self, "do_" + cls)
+                run(cmd_args[0])
+
     def do_EOF(self, arg):
         """Exit with EOF
         """
