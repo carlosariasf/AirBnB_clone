@@ -58,6 +58,16 @@ class FileStorage():
                     tmp.update({key: obj.to_dict()})
                 f.write(json.dumps(tmp))
 
+    def counter(self, cls):
+        """Counter items dic
+        """
+        count = 0
+        dict_tmp = self.__objects
+        for key, val in dict_tmp.items():
+            if cls in key:
+                count += 1
+        print(count)
+
     def reload(self):
         """ another comment """
         try:

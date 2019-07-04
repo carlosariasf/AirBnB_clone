@@ -33,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
         cmd_args = args.split(".")
         if self.clss.get(cmd_args[0]):
             cls = cmd_args[1].replace("()", "")
-            if cls == "all":
+            if cls == "all" or cls == "count":
                 run = getattr(self, "do_" + cls)
                 run(cmd_args[0])
 
@@ -120,6 +120,11 @@ class HBNBCommand(cmd.Cmd):
                 pass
             else:
                 print(listn)
+
+    def do_count(self, arg):
+        """Call counter
+        """
+        storage.counter(arg)
 
     def do_update(self, args):
         """Update or add new attribute to object
