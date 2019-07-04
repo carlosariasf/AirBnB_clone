@@ -13,7 +13,8 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
     clss = {
-            "BaseModel": BaseModel}
+            "BaseModel": BaseModel,
+            "User": User}
 
     def do_EOF(self, arg):
         """Exit with EOF

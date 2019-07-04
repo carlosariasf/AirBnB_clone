@@ -4,7 +4,7 @@
 
 import json
 from models.base_model import BaseModel
-
+from models.user import User
 
 class FileStorage():
     """ that serializes instances to a JSON file and deserializes JSON  """
@@ -12,7 +12,8 @@ class FileStorage():
     __file_path = "file.json"
     __objects = {}
     name_cls = {
-                "BaseModel": BaseModel}
+                "BaseModel": BaseModel,
+                "User": User}
 
     def all(self):
         """ another comment """
@@ -55,7 +56,9 @@ class FileStorage():
                     data = json.loads(data)
                     for key, obj in sorted(data.items()):
                         obt = key.split(".")[0]
+                        print(obt)
                         obtn = self.name_cls.get(obt)
+                        print(obtn)
                         data.update({key: obtn(**obj)})
                     self.__objects = data
         except FileNotFoundError:
