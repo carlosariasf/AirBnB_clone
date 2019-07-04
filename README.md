@@ -56,4 +56,7 @@ EOF  help  quit
 (hbnb) 
 $
 ```
-
+## 
+## Contributors
+[Carlos Arias](https://github.com/carlosariasf)
+[Samuel Florez](https://github.com/muxanz)
