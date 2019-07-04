@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-'''Unittest for base_model'''
+''' Unittest for base_model '''
 import unittest
 from models.base_model import BaseModel
 from datetime import datetime
@@ -79,5 +78,3 @@ class test_base_model(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-=======
->>>>>>> 06ae5c96fb86c716da42d8bdd94fd905de1de39b
