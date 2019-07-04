@@ -5,6 +5,7 @@
 
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 
 
@@ -13,7 +14,7 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
     clss = {
-            "BaseModel": BaseModel}
+            "BaseModel": BaseModel, "User": User}
 
     def do_EOF(self, arg):
         """Exit with EOF
@@ -39,6 +40,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             new = self.clss.get(arg)()
+            print(self.clss.get(arg))
             new.save()
             print(new.id)
 
