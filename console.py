@@ -117,13 +117,13 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     tmp = str(all_obj[str(
                         cmd_args[0]) + '.' + str(cmd_args[1])])
-                    if str(cmd_args[2]) in tmp:
+                    if len(cmd_args) is 3:
+                        print("** value missing **")
+                    else:
                         storage.update_attr(
                                 str(cmd_args[0]) + '.' + str(cmd_args[1]),
-                                str(cmd_args[2]),
-                                str(cmd_args[3]))
-                    else:
-                        print("** value missing **")
+                                str(cmd_args[2]).replace('"', ''),
+                                str(cmd_args[3]).replace('"', ''))
             else:
                 print("** no instance found **")
 
