@@ -31,16 +31,24 @@ class HBNBCommand(cmd.Cmd):
     def default(self, args):
         """called on an input line when the command prefix is not recognized
         """
-        cmd_args = re.split('[.()"\']', args)
+        cmd_args = re.split('[.,()"\' ]', args)
         cmd_args = list(filter(None, cmd_args))
         if self.clss.get(cmd_args[0]):
             cls = cmd_args[1]
-            if cls == "all" or cls == "count":
+            leng = len(cmd_args)
+            if leng is 2:
                 run = getattr(self, "do_" + cls)
                 run(cmd_args[0])
-            elif cls == "show":
+            elif leng is 3:
                 run = getattr(self, "do_" + cls)
                 run(cmd_args[0] + " " + cmd_args[2])
+            elif leng is 4:
+                run = getattr(self, "do_" + cls)
+                run(cmd_args[0] + " " + cmd_args[2] + ' ' + cmd_args[3])
+            elif leng is 5:
+                run = getattr(self, "do_" + cls)
+                run(cmd_args[0] + ' ' + cmd_args[2] + ' ' + cmd_args[3] +
+                        ' ' + cmd_args[4])
 
     def do_EOF(self, arg):
         """Exit with EOF
