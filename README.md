@@ -56,7 +56,27 @@ EOF  help  quit
 (hbnb) 
 $
 ```
-## 
+## Examples commands
+create -> creates a new instance of BaseModel class
+```
+(hbnb) create BaseModel
+```
+update -> updates an instance with class name, id and attribute
+```
+(hbnb) update BaseModel b6f2ef1d-9673-4hg5-abe4-44eff3d05t78 user "other"
+```
+show -> show an string representation of an instance
+```
+(hbnb) show BaseModel b6f2ef1d-9673-4hg5-abe4-44eff3d05t78
+```
+destroy -> deletes an instance
+```
+(hbnb) destroy BaseModel b6f2ef1d-9673-4hg5-abe4-44eff3d05t78
+```
+all -> show all string representation of all instances
+```
+(hbnb) all
+```
 ## Contributors
-[Carlos Arias](https://github.com/carlosariasf)
-[Samuel Florez](https://github.com/muxanz)
+- [Carlos Arias](https://github.com/carlosariasf)
+- [Samuel Florez](https://github.com/muxanz)
