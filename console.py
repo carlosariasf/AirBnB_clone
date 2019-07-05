@@ -4,6 +4,7 @@
 
 
 import cmd
+import re
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -30,12 +31,16 @@ class HBNBCommand(cmd.Cmd):
     def default(self, args):
         """called on an input line when the command prefix is not recognized
         """
-        cmd_args = args.split(".")
+        cmd_args = re.split('[.()"\']', args)
+        cmd_args = list(filter(None, cmd_args))
         if self.clss.get(cmd_args[0]):
-            cls = cmd_args[1].replace("()", "")
+            cls = cmd_args[1]
             if cls == "all" or cls == "count":
                 run = getattr(self, "do_" + cls)
                 run(cmd_args[0])
+            elif cls == "show":
+                run = getattr(self, "do_" + cls)
+                run(cmd_args[0] + " " + cmd_args[2])
 
     def do_EOF(self, arg):
         """Exit with EOF
