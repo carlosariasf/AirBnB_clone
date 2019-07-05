@@ -5,6 +5,7 @@
 
 import cmd
 import re
+import math
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -31,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
     def default(self, args):
         """called on an input line when the command prefix is not recognized
         """
-        cmd_args = re.split('[.,()"\' ]', args)
+        cmd_args = re.split('[.,(){}":\' ]', args)
         cmd_args = list(filter(None, cmd_args))
         if self.clss.get(cmd_args[0]):
             cls = cmd_args[1]
@@ -49,6 +50,24 @@ class HBNBCommand(cmd.Cmd):
                 run = getattr(self, "do_" + cls)
                 run(cmd_args[0] + ' ' + cmd_args[2] + ' ' + cmd_args[3] +
                         ' ' + cmd_args[4])
+            elif leng >= 6 and cls == "update":
+                fval = 3
+                lengf = int(math.ceil((leng - 3) / 2))
+                run = getattr(self, "do_" + cls)
+                if leng % 2 == 0:
+                    for i in range(lengf):
+                        if i != lengf - 1:
+                            run(cmd_args[0] + ' ' + cmd_args[2] + ' ' +
+                                cmd_args[fval] + ' ' + cmd_args[fval+1])
+                            fval += 2
+                        else:
+                            run(cmd_args[0] + ' ' + cmd_args[2] + ' ' +
+                                cmd_args[fval])
+                else:
+                    for i in range(lengf):
+                        run(cmd_args[0] + ' ' + cmd_args[2] + ' ' +
+                            cmd_args[fval] + ' ' + cmd_args[fval+1])
+                        fval += 2
 
     def do_EOF(self, arg):
         """Exit with EOF
