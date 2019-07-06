@@ -17,7 +17,7 @@ class test_FileStorage(unittest.TestCase):
         cls.obj_tmp = FileStorage()
 
     @classmethod
-    def teardown(cls):
+    def tearDownClass(cls):
         """remove test instances"""
         del cls.obj_tmp
         try:
@@ -37,13 +37,13 @@ class test_FileStorage(unittest.TestCase):
         self.assertTrue(type(self.obj_tmp._FileStorage__file_path) is str)
 
     def test_all(self):
-    """ another comment """
+        """ another comment """
         dict_tmp = self.obj_tmp.all()
         self.assertIsInstance(dict_tmp, dict)
         self.assertIs(dict_tmp, self.obj_tmp._FileStorage__objects)
 
     def test_reload(self):
-    """ another comment """
+        """ another comment """
         self.assertIsNotNone(FileStorage.reload)
         try:
             os.remove("file.json")
@@ -52,34 +52,30 @@ class test_FileStorage(unittest.TestCase):
         with open("file.json", "w") as writer:
             writer.write("{}")
         with open("file.json", "r") as reader:
-            for l in reader:
-                self.assertEqual(l, "{}")
+            for i in reader:
+                self.assertEqual(i, "{}")
         self.assertIs(self.obj_tmp.reload(), None)
 
     def test_new(self):
-    """ another comment """
+        """ another comment """
         dict_tmp = self.obj_tmp.all()
         new = BaseModel()
         tmp = "{}.{}".format(type(new).__name__, new.id)
         self.assertTrue(tmp in dict_tmp.keys())
 
     def test_save(self):
-    """ another comment """
+        """ another comment """
         self.assertIsNotNone(FileStorage.save)
         self.obj_tmp.save()
         with open("file.json", 'r') as reader:
             string = reader.readlines()
-
         try:
             os.remove("file.json")
         except BaseException:
             pass
-
         self.obj_tmp.save()
-
         with open("file.json", 'r') as reader:
             string2 = reader.readlines()
-
         self.assertEqual(string, string2)
         self.assertTrue(os.path.exists("file.json"))
 

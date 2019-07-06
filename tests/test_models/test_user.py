@@ -12,12 +12,12 @@ class test_user(unittest.TestCase):
     '''Tests user from Base'''
 
     @classmethod
-    def setclass(cls):
+    def setUpClass(cls):
         ''' another comment '''
         cls.tmp = User()
 
     @classmethod
-    def teardown(cls):
+    def tearDownClass(cls):
         ''' another comment '''
         del cls.tmp
         try:
@@ -63,7 +63,6 @@ class test_user(unittest.TestCase):
         test_dic = self.tmp.to_dict()
         self.assertEqual(type(test_dic), dict)
         self.assertTrue('to_dict' in dir(self.tmp))
-
 
 if __name__ == "__main__":
     unittest.main()
