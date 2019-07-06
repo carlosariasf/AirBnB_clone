@@ -49,7 +49,7 @@ class HBNBCommand(cmd.Cmd):
             elif leng is 5:
                 run = getattr(self, "do_" + cls)
                 run(cmd_args[0] + ' ' + cmd_args[2] + ' ' + cmd_args[3] +
-                        ' ' + cmd_args[4])
+                    ' ' + cmd_args[4])
             elif leng >= 6 and cls == "update":
                 fval = 3
                 lengf = int(math.ceil((leng - 3) / 2))
