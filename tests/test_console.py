@@ -8,13 +8,24 @@ from unittest.mock import create_autospec
 from datetime import datetime
 
 
-class test_console(unittest.TestCase):
+class test_HBNBCommand(unittest.TestCase):
     """ Test Console """
 
     @classmethod
     def setUpClass(cls):
         cls.m_stdin = create_autospec(os.sys.stdin)
         cls.m_stdout = create_autospec(os.sys.stdout)
+
+    def create(self, server=None):
+        """ create temp console"""
+        return HBNBCommand(stdin=self.m_stdin, stdout=self.m_stdout)
+
+    def _last_write(self, nr=None):
+        """:return: last `n` output lines"""
+        if nr is None:
+            return self.m_stdout.write.call_args[0][0]
+        return "".join(
+            map(lambda c: c[0][0], self.m_stdout.write.call_args_list[-nr:]))
 
     @classmethod
     def tearDownClass(cls):
@@ -45,3 +56,37 @@ class test_console(unittest.TestCase):
         self.assertTrue(hasattr(HBNBCommand, "do_count"))
         self.assertTrue(hasattr(HBNBCommand, "do_update"))
         self.assertTrue(hasattr(HBNBCommand, "do_destroy"))
+
+    def test_quit(self):
+        """ test quit """
+        cli = self.create()
+        self.assertTrue(cli.onecmd("quit"))
+        self.assertEqual(True, cli.onecmd("quit"))
+
+    def test_create(self):
+        """ test create """
+        cli = self.create()
+        self.assertTrue("** class name missing **", cli.onecmd("create"))
+
+    def test_show(self):
+        """ test show """
+        cli = self.create()
+        self.assertTrue("** class name missing **", cli.onecmd("show"))
+
+    def test_destroy(self):
+        """ test destroy """
+        cli = self.create()
+        self.assertTrue("** class name missing **", cli.onecmd("destroy"))
+
+    def test_all(self):
+        """ test update """
+        cli = self.create()
+        self.assertTrue("** class doesn't exist **", cli.onecmd("all My"))
+
+    def test_update(self):
+        """ test update """
+        cli = self.create()
+        self.assertTrue("** class name missing **", cli.onecmd("update"))
+
+if __name__ == "__main__":
+    unittest.main()
