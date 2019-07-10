@@ -66,7 +66,8 @@ class test_HBNBCommand(unittest.TestCase):
     def test_create(self):
         """ test create """
         cli = self.create()
-        self.assertTrue("** class name missing **", cli.onecmd("create"))
+        self.assertFalse(cli.onecmd("create"))
+        self.assertEqual("** class name missing **", self._last_write())
 
     def test_show(self):
         """ test show """
