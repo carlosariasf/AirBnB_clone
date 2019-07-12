@@ -3,7 +3,7 @@
 .filters .search_btn:hover {opacity:0.9;}
 .filters .locations {height:100%;width:25%;border-right:1px #DDD solid;float:left;line-height:0.3;padding-left:40px;}
 .filters .amenities {height:100%;width:25%;float:left;line-height:0.3; padding-left:40px}
-.filters .popover {display:none;background-color:#FAFAFA;width:100%;border:1px #DDD solid;margin-left:-41px;margin-top:-26px;padding-top:10px;padding-bottom:25px}
+.filters .popover {display:none;background-color:#FAFAFA;width:100%;border:1px #DDD solid;margin-left:-41px;margin-top:26px;padding-top:10px;padding-bottom:25px}
 .filters .locations:hover .popover, .amenities:hover .popover {display:block;}
 .filters li {list-style:none;margin-left:-20px;}
 .filters h2 {font-size:16px;}
