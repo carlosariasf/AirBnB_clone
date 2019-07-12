@@ -1,1 +1,3 @@
 body {height:100%;color:#484848;font-size:14px;font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;}
+.vertical_center {margin:0;position:absolute;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);
+}
