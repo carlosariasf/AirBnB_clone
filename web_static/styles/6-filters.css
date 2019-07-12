@@ -1,8 +1,8 @@
 .filters {position:relative;background-color:#FFF;height:70px;width:100%;border:1px #DDD solid;border-radius:4px;}
 .filters .search_btn {position:absolute;font-size:18px;border:none;background-color:#FF5A5F;color:#FFF;height:48px;width:20%;border-radius:4px;float:right;right:30px}
 .filters .search_btn:hover {opacity:0.9;}
-.filters .locations {height:100%;width:25%;border-right:1px #DDD solid;float:left;line-height:0.3;padding-left:40px;}
-.filters .amenities {height:100%;width:25%;float:left;line-height:0.3; padding-left:40px}
+.filters .locations {height:100%;width:25%;border-right:1px #DDD solid;float:left;line-height:0;padding-left:40px;padding-top:9px;}
+.filters .amenities {height:100%;width:25%;float:left;line-height:0;padding-left:40px;padding-top:9px;}
 .filters .popover {display:none;background-color:#FAFAFA;width:100%;border:1px #DDD solid;margin-left:-41px;margin-top:26px;padding-top:10px;}
 .filters .locations:hover .popover, .amenities:hover .popover {display:block;}
 .filters li {list-style:none;margin-left:-20px;}
