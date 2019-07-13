@@ -11,7 +11,8 @@
 .places article .user {font-weight:bold;text-align:left;padding-top:10px;}
 .places article .description {text-align:left;padding-top:5px;}
 .places article .amenities, .places article .reviews {margin-top:40px;position:relative;text-align:left;}
-.places article ul, .places article li {list-style:none;}
+.places article ul {list-style:none;margin-left:-20px;}
+.places article li {list-style:none;}
 .places article .amenities h2, .places article .reviews h2 {text-align:left;font-size:16px;border-bottom:1px #DDD solid;}
 .places article .wifi {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_wifi.png');padding-left:30px;}
 .places article .tv {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_tv.png');padding-left:30px;}
