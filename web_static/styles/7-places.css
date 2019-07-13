@@ -1,0 +1,4 @@
+.places {top:0;left:0;position:relative;}
+.places h1 {font-size:30px;}
+.places article {width:390px;padding:10px;margin:20px;border:1px #FF5A5F solid;border-radius:4px;float:left;}
+.places article h2 {font-size:30px;text-align:center;}
