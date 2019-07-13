@@ -12,7 +12,7 @@
 .places article .description {text-align:left;padding-top:5px;}
 .places article .amenities, .places article .reviews {margin-top:40px;position:relative;}
 .places article ul li {list-style:none;}
-.places article .amenities h2, .places article .reviews h2 {font-size:16px;color:#DDD;border-bottom:1px #DDD solid;}
+.places article .amenities h2, .places article .reviews h2 {font-size:16px;border-bottom:1px #DDD solid;}
 .places article .wifi {height:50px;background-image: url('../images/icon_wifi.png';padding-left:50;}
 .places article .tv {height:50px;background-image: url('../images/icon_tv.png';padding-left:50;}
 .places article .pets {height:50px;background-image: url('../images/icon_pets.png';padding-left:50;}
