@@ -10,11 +10,11 @@
 .places article .information .number_bathrooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bath.png');padding-top:50px;background-position:center;display:inline-block;}
 .places article .user {font-weight:bold;text-align:left;padding-top:10px;}
 .places article .description {text-align:left;padding-top:5px;}
-.places article .amenities, .places article .reviews {margin-top:40px;position:relative;}
+.places article .amenities, .places article .reviews {margin-top:40px;position:relative;text-align:left;}
 .places article ul li {list-style:none;}
-.places article .amenities h2, .places article .reviews h2 {font-size:16px;border-bottom:1px #DDD solid;}
-.places article .wifi {height:50px;background-image: url('../images/icon_wifi.png';padding-left:50;}
-.places article .tv {height:50px;background-image: url('../images/icon_tv.png';padding-left:50;}
-.places article .pets {height:50px;background-image: url('../images/icon_pets.png';padding-left:50;}
+.places article .amenities h2, .places article .reviews h2 {text-align:left;font-size:16px;border-bottom:1px #DDD solid;}
+.places article .wifi {height:50px;background-image: url('../images/icon_wifi.png';padding-left:50px;}
+.places article .tv {height:50px;background-image: url('../images/icon_tv.png';padding-left:50px;}
+.places article .pets {height:50px;background-image: url('../images/icon_pets.png';padding-left:50px;}
 .places article .reviews h3 {font-size:14px;}
 .places article .reviews p {font-size:12px;}
