@@ -9,5 +9,5 @@
 .places article .information .max_guest {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_group.png');padding-top:50px;background-position:center;display:inline-block;}
 .places article .information .number_rooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bed.png');padding-top:50px;background-position:center;display:inline-block;}
 .places article .information .number_bathrooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bath.png');padding-top:50px;background-position:center;display:inline-block;}
-.places article .user {font-weight:bold;text-align:left;}
-.places article .description {text-align:left;}
+.places article .user {font-weight:bold;text-align:left;padding-top:10px;}
+.places article .description {text-align:left;padding-top:5px;}
