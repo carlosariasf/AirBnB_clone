@@ -4,11 +4,11 @@
 .places article {width:390px;padding:10px;margin:20px;border:1px #FF5A5F solid;border-radius:4px;float:none;display:inline-block;}
 .places article h2 {font-size:30px;text-align:center;}
 .center {margin-left:auto;margin-right:auto;text-align:center;}
-.places article .price_by_night {color:#FF5A5F;border:4px #FF5A5F;border-radius:50%;min-width:60px;height:60px;font-size:30px;top:0;right:0;}
-.places article .information {height:80px;border-bottom:1px #DDD solid;border-top:1px #DDD solid;}
-.places article .information .max_guest {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_group.png');}
-.places article .information .number_rooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bed.png');}
-.places article .information .number_bathrooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bath.png');}
+.places article .price_by_night {color:#FF5A5F;border:4px #FF5A5F solid;border-radius:50%;min-width:60px;height:60px;font-size:30px;top:6px;right:9px;position:absolute;}
+.places article .information {height:80px;border-bottom:1px #DDD solid;border-top:1px #DDD solid;position:relative;}
+.places article .information .max_guest {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_group.png');padding-top:50px;background-position:center;display:inline-block;}
+.places article .information .number_rooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bed.png');padding-top:50px;bac    kground-position:center;display:inline-block;}
+.places article .information .number_bathrooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bath.png');padding-top:50px;bac    kground-position:center;display:inline-block;}
 .places article .user {font-weight:bold;}
 .places article .description {}
 
