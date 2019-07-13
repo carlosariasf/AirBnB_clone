@@ -17,5 +17,6 @@
 .places article .wifi {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_wifi.png');padding-left:30px;}
 .places article .tv {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_tv.png');padding-left:30px;}
 .places article .pets {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_pets.png');padding-left:30px;}
+.places article .reviews li {margin-top:10px;}
 .places article .reviews h3 {font-size:14px;}
 .places article .reviews p {font-size:12px;}
