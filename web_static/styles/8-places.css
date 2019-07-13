@@ -4,7 +4,7 @@
 .places article {width:390px;height:330px;padding:10px;margin:20px;border:1px #FF5A5F solid;border-radius:4px;float:none;display:inline-block;position:relative;}
 .places article h2 {font-size:30px;text-align:center;}
 .center {margin-left:auto;margin-right:auto;text-align:center;}
-.places article .price_by_night {color:#FF5A5F;border:4px #FF5A5F solid;border-radius:50%;min-width:60px;height:60px;font-size:30px;top:6px;right:9px;position:absolute;}
+.places article .price_by_night {color:#FF5A5F;border:4px #FF5A5F solid;border-radius:50%;min-width:60px;height:60px;font-size:30px;top:12px;right:10px;position:absolute;}
 .places article .information {height:80px;border-bottom:1px #DDD solid;border-top:1px #DDD solid;position:relative;}
 .places article .information .max_guest {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_group.png');padding-top:50px;background-position:center;display:inline-block;}
 .places article .information .number_rooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bed.png');padding-top:50px;background-position:center;display:inline-block;}
