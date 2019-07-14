@@ -20,5 +20,5 @@
     input#toggle:checked ~ .locations {display:block;}
 }
 @media all and (max-width: 1024px) {
-    .filters {margin:0 20px;}
+    .filters {margin:0 20px;width:unset;}
 }
