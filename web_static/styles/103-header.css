@@ -1,0 +1,5 @@
+header {background-color:#FFF;height:70px;width:100%;border-bottom:1px #CCC solid;}
+header .logo {position:absolute;left:20px;background-image: url('../images/logo.png');width:142px;height:60px;}
+@media all and (max-width: 480px) {
+    header .logo {position:unset;left:0;background-image: url('../images/logo.png');width:100%;height:60px;background-position:center;background-repeat:no-repeat;}
+}

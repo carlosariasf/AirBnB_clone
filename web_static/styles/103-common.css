@@ -1,0 +1,7 @@
+body {height:100%;margin:0;color:#484848;font-size:14px;font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;}
+.container {max-width:1000px;margin:30px auto 30px auto;}
+.vertical_center {margin:0;position:absolute;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);}
+.full_center {margin:0;position:absolute;top:50%;left:50%;-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);}
+@media all and (max-width: 480px) {
+     .container {max-width:unset;margin:30px 10px 30px 10px;}
+}
