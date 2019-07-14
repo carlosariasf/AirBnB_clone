@@ -3,7 +3,7 @@
 .filters .search_btn:hover {opacity:0.9;}
 .filters .locations {height:100%;width:25%;border-right:1px #DDD solid;float:left;line-height:0.3;padding-left:40px;}
 .filters .amenities {height:100%;width:25%;float:left;line-height:0.3;padding-left:40px;}
-.filters .popover {display:none;background-color:#FAFAFA;width:100%;border:1px #DDD solid;margin-left:-41px;margin-top:26px;padding-top:20px;position:absolute;z-index:2;}
+.filters .popover {display:none;background-color:#FAFAFA;width:100%;border:1px #DDD solid;margin-left:-41px;margin-top:26px;padding-top:20px;position:relative;z-index:2;}
 .filters .locations:hover .popover, .amenities:hover .popover {display:block;}
 .filters li {list-style:none;margin-left:-20px;}
 .filters .sub_menu {line-height:1.3;margin-top:5px;margin-bottom:30px;}
@@ -13,7 +13,7 @@
 @media all and (max-width: 480px) {
     .filters {border:none;height:auto;}
     .filters .locations, .filters .amenities {position:unset;padding:0;height:60%;width:49%;border:1px #DDD solid;text-align:center;}
-    .filters .popover {width:35%;padding-top:20px;margin-top:0;margin-left:0;}
+    .filters .popover {position:absolute;width:35%;padding-top:20px;margin-top:0;margin-left:0;}
     .filters li {margin-left:-40px;}
     .filters .sub_menu {margin-bottom:40px;}
     .filters .search_btn {position:relative;width:100px;margin-top:20px;height:50px;width:100%;border-radius:0;float:none;right:0;}
