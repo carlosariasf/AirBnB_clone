@@ -22,5 +22,6 @@
 .places article .reviews h3 {font-size:14px;}
 .places article .reviews p {font-size:12px;}
 @media all and (max-width: 480px) {
-
+    .places h1 {text-align:center;}
+    .places article {width:unset;min-height:330px;padding:10px;margin:0 0 30px 0;}
 }
