@@ -24,4 +24,5 @@
 @media all and (max-width: 480px) {
     .places h1 {text-align:center;}
     .places article {width:unset;min-height:330px;padding:10px;margin:0 0 30px 0;}
+    .places article .information .max_guest, .places article .information .number_rooms, .places article .information .number_bathrooms {width:80px;}
 }
