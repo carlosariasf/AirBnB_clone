@@ -17,5 +17,4 @@
     .filters li {margin-left:-40px;}
     .filters .sub_menu {margin-bottom:30px;}
     .filters .search_btn {position:relative;width:100px;margin-top:50px;height:50px;width:100%;border-radius:0;float:none;right:0;}
-.filters .locations:focus .popover, .amenities:focus .popover {display:block;}
 }
