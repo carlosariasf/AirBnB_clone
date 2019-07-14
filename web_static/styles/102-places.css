@@ -1,0 +1,25 @@
+@media all and (max-width: 1024px) {
+    .places {display:flex;flex-wrap:wrap;justify-content:center;}
+    .places h1 {font-size:30px;text-align:left;width:100%;}
+    .places article {width:390px;min-height:330px;padding:10px;margin:20px;border:1px #FF5A5F solid;border-radius:4px;float:none;display:inline-table;position:relative;}
+    .places article h2 {font-size:30px;text-align:center;}
+    .center {margin-left:auto;margin-right:auto;text-align:center;}
+    .places article .price_by_night {color:#FF5A5F;border:4px #FF5A5F solid;border-radius:50%;min-width:60px;height:60px;font-size:30px;top:12px;right:10px;position:absolute;}
+    .places article .price_center {padding:12px 2px;}
+    .places article .information {height:80px;border-bottom:1px #DDD solid;border-top:1px #DDD solid;position:relative;}
+    .places article .information .max_guest {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_group.png');padding-top:50px;background-position:center;display:inline-block;}
+    .places article .information .number_rooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bed.png');padding-top:50px;background-position:center;display:inline-block;}
+    .places article .information .number_bathrooms {width:100px;background-repeat:no-repeat;background-image: url('../images/icon_bath.png');padding-top:50px;background-position:center;display:inline-block;}
+    .places article .user {font-weight:bold;text-align:left;padding-top:10px;}
+    .places article .description {text-align:left;padding-top:5px;}
+    .places article .amenities, .places article .reviews {margin-top:40px;position:relative;text-align:left;}
+    .places article ul {list-style:none;margin-left:-40px;}
+    .places article li {list-style:none;line-height:1.5;}
+    .places article .amenities h2, .places article .reviews h2 {text-align:left;font-size:16px;border-bottom:1px #DDD solid;}
+    .places article .wifi {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_wifi.png');padding-left:30px;}
+    .places article .tv {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_tv.png');padding-left:30px;}
+    .places article .pets {height:20px;background-repeat:no-repeat;background-size:contain;background-image: url('../images/icon_pets.png');padding-left:30px;}
+    .places article .reviews li {padding-top:1px;line-height:0.6;}
+    .places article .reviews h3 {font-size:14px;}
+    .places article .reviews p {font-size:12px;}
+}
