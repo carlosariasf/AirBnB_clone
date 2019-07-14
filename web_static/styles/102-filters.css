@@ -13,8 +13,8 @@
 @media all and (max-width: 480px) {
     .filters {border:none;height:auto;}
     .filters .locations, .filters .amenities {position:unset;padding:0;height:60%;width:49%;border:1px #DDD solid;text-align:center;}
-    .filters .popover {position:absolute;width:35%;padding-top:20px;margin-top:0;margin-left:0;}
+    .filters .popover {position:absolute;width:37%;padding-top:20px;margin-top:0;margin-left:0;}
     .filters li {margin-left:-40px;}
-    .filters .sub_menu {margin-bottom:40px;}
-    .filters .search_btn {position:relative;width:100px;margin-top:20px;height:50px;width:100%;border-radius:0;float:none;right:0;}
+    .filters .sub_menu {margin-bottom:30px;}
+    .filters .search_btn {position:relative;width:100px;margin-top:50px;height:50px;width:100%;border-radius:0;float:none;right:0;}
 }
