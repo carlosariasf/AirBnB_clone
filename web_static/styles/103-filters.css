@@ -1,6 +1,6 @@
 .filters {position:relative;background-color:#FFF;height:70px;width:100%;border:1px #DDD solid;border-radius:4px;}
 .filters .search_btn {position:absolute;font-size:18px;border:none;background-color:#FFF;color:#000;border:4px #FF5A5F solid;height:48px;width:20%;border-radius:4px;float:right;right:30px}
-.filters .search_btn:hover {opacity:0.9;}
+.filters .search_btn:hover {opacity:0.9;border-color: #000;}
 .filters .locations {height:100%;width:25%;border-right:1px #DDD solid;float:left;line-height:0.3;padding-left:40px;}
 .filters .amenities {height:100%;width:25%;float:left;line-height:0.3;padding-left:40px;}
 .filters .popover {display:none;background-color:#FAFAFA;width:100%;border:1px #DDD solid;margin-left:-41px;margin-top:26px;padding-top:20px;position:relative;z-index:2;}
