@@ -1,6 +1,6 @@
 .places {display:flex;flex-wrap:wrap;justify-content:center;}
 .places h1 {font-size:30px;text-align:left;width:100%;}
-.places article {width:390px;min-height:330px;padding:10px;margin:20px;border:1px #FF5A5F solid;border-radius:4px;float:none;display:inline-table;position:relative;}
+.places article {width:390px;min-height:330px;padding:10px;margin:20px;border:2px #FF5A5F solid;border-radius:4px;float:none;display:inline-table;position:relative;}
 .places article h2 {font-size:30px;text-align:center;}
 .center {margin-left:auto;margin-right:auto;text-align:center;}
 .places article .price_by_night {color:#FF5A5F;border:4px #FF5A5F solid;border-radius:50%;min-width:60px;height:60px;font-size:30px;top:12px;right:10px;position:absolute;}
